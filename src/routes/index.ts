@@ -1,10 +1,9 @@
 import express, { Express } from "express";
 let ping = require("./pingRoutes.ts");
-// TODO: Tasks
-// let tasks = require("./tasksRoutes.ts");
+let tasks = require("./tasksRoutes.ts");
 
 const routes = (app: Express) => {
-  app.use(ping);
+  app.use(ping, tasks);
 };
 
 export default routes;
