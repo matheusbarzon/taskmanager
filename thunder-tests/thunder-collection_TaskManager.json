@@ -1,0 +1,45 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "TaskManager",
+    "dateExported": "2023-07-21T16:39:48.437Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "ae1c7f03-06fe-43de-9fac-edf6d87d6d86",
+            "name": "tasks",
+            "containerId": "",
+            "created": "2023-07-19T23:39:46.745Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d8c58690-0634-4824-b58f-3097612e98ee",
+            "colId": "a61cd372-b601-448f-8eff-f6ac62d10021",
+            "containerId": "",
+            "name": "ping",
+            "url": "localhost:3000/ping",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-19T23:36:52.476Z",
+            "modified": "2023-07-20T00:08:30.006Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d537c04c-0ddc-41fe-baab-f69b91dfab84",
+            "colId": "a61cd372-b601-448f-8eff-f6ac62d10021",
+            "containerId": "ae1c7f03-06fe-43de-9fac-edf6d87d6d86",
+            "name": "tasks",
+            "url": "localhost:3000/tasks",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-19T23:40:03.469Z",
+            "modified": "2023-07-20T00:18:30.648Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
