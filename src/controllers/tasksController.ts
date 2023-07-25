@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
+import { DBDatabase } from "../database/dataBase";
 
 class TaskController {
-
   static getTasks = (_: Request, res: Response) => {
-    let db = require("../database/dbConnect.ts");
+    let db = new DBDatabase();
 
     db.query("SELECT * FROM tasks;", function (error: any, results: any) {
       if (error) {

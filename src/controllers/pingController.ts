@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
+import { DBDatabase } from "../database/dataBase";
 
 class PingController {
   static getPing = function (_: Request, res: Response) {
-    let db = require("../database/dbConnect.ts");
+    let db = new DBDatabase();
 
     db.query("SELECT CURRENT_TIMESTAMP;", function (error: any, results: any) {
       if (error) {
