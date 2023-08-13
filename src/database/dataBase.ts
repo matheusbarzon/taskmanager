@@ -4,20 +4,13 @@ import { DBSQLite } from "./dbSQLite";
 export class DBDatabase {
   private db: IDatabase;
 
+  private listDataBase: { [key: string]: any } = {
+    mysql: DBMySQL,
+    sqlite: DBSQLite,
+  };
+
   constructor() {
-    switch (process.env.DB) {
-      case "mysql":
-        this.db = new DBMySQL();
-        break;
-
-      case "sqlite":
-        this.db = new DBSQLite();
-
-        break;
-
-      default:
-        throw new Error("Banco de dados não implementado!");
-    }
+    this.db = new this.listDataBase[process.env.DB ?? ""]();
   }
 
   query(sql: string, callback: {}) {
